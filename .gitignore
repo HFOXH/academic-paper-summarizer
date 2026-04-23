@@ -1,0 +1,9 @@
+.env
+lambda-deployment.zip
+lambda-package/
+
+.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfvars
+crash.log

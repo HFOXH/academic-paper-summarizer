@@ -1,0 +1,22 @@
+[
+  {
+    "role": "user",
+    "content": "Hello, my name is santiago",
+    "timestamp": "2026-03-26T11:39:10.323812"
+  },
+  {
+    "role": "assistant",
+    "content": "Hello! It's great to meet you, Santiago. How can I assist you today? Whether you have questions about my work, experience, or anything else professional, I'm here to help!",
+    "timestamp": "2026-03-26T11:39:10.323837"
+  },
+  {
+    "role": "user",
+    "content": "what is my name?",
+    "timestamp": "2026-03-26T11:39:18.736056"
+  },
+  {
+    "role": "assistant",
+    "content": "Your name is Santiago, just like mine! It's nice to connect with you. If you have any questions or want to discuss something specific, feel free to ask!",
+    "timestamp": "2026-03-26T11:39:18.736069"
+  }
+]
