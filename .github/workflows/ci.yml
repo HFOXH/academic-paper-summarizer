@@ -1,25 +1,33 @@
-name: Backend CI
+name: Tests
 
 on:
   push:
-    branches: ["main"]
+    branches: [main]
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
+        working-directory: backend
         run: |
-          pip install --upgrade pip
-          pip install fastapi httpx pytest
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=backend" >> $GITHUB_ENV
 
       - name: Run tests
-        run: |
-          pytest backend/tests
+        working-directory: backend
+        run: pytest tests -v
